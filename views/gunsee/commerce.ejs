@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+ 
+<h1>All Campgrounds</h1>
+<div>
+    <a href="/gunsee/new" class="btn btn-success mb-3">Add Campground</a>
+</div>
+ 
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Scoial Security</th>
+            <th>View Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% firearms.forEach((firearms, index) => { %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td class="fw-bold"><%= firearms.socialsecurity %></td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/gunsee/<%= firearms._id %>">
+                        View <%= firearms.firstname%>
+                    </a>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+    

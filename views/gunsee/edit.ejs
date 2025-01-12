@@ -1,0 +1,72 @@
+<% layout('layouts/boilerplate')%>
+<div>
+    <h1 class="text-center">Edit Citizen</h1>
+    <div class="col-6 offset-3">
+        <form action="/gunsee/<%=firearm._id %>?_method=PUT" method="POST" novalidate class="validated-form">
+            <div>
+                <div class="mb-3">
+                <label class="form-label" for="socialsecurity">Social security number:</label>
+                <input class="form-control"type="text" id="socialsecurity" name="firearm[socialsecurity]" value="<%=firearm.socialsecurity %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="firstname">First name:</label>
+                <input class="form-control" type="text" id="firstname" name="firearm[firstname]" value="<%=firearm.firstname %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="middlename">Middle name:</label>
+                <input class="form-control" type="text" id="middlename" name="firearm[middlename]" value="<%=firearm.middlename %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="lastname">Last name:</label>
+                <input class="form-control" type="text" id="lastname" name="firearm[lastname]" value="<%=firearm.lastname %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="gunname">Gun name:</label>
+                <input class="form-control" type="text" id="gunname" name="firearm[gunname]" value="<%=firearm.gunname %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="serialnumber">Serial number:</label>
+                <input class="form-control" type="text" id="serialnumber" name="firearm[serialnumber]" value="<%=firearm.serialnumber %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="locationbought">Location purchased:</label>
+                <input class="form-control" type="text" id="locationbought" name="firearm[locationbought]" value="<%=firearm.locationbought %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="dealername">Dealer name:</label>
+                <input class="form-control" type="text" id="dealername" name="firearm[dealername]" value="<%=firearm.dealername %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-success">Submit Edited Form</button>
+            </div>
+            
+            <a href="/gunsee/<%= firearm._id%>">Back to individual data</a>
+        </form>
+
+    </div>
+</div>
